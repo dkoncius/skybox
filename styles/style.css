@@ -2,5 +2,66 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden
-  }
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.buttons {
+  width: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  margin: auto;
+}
+
+.buttons button {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 150px;
+  cursor: pointer;
+  color: #FFF;
+  background: none;
+  border: none;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.buttons button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+
+.buttons button:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+
+.buttons button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.5);
+  transform: scale(1.2,1.2);
+}
+.buttons button:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
+}
+

@@ -15,12 +15,12 @@ function init() {
   controls.maxDistance = 3000;
   
   let materialArray = [];
-  let texture_ft = new THREE.TextureLoader().load( 'pictures/barren_ft.jpg');
-  let texture_bk = new THREE.TextureLoader().load( 'pictures/barren_bk.jpg');
-  let texture_up = new THREE.TextureLoader().load( 'pictures/barren_up.jpg');
-  let texture_dn = new THREE.TextureLoader().load( 'pictures/barren_dn.jpg');
-  let texture_rt = new THREE.TextureLoader().load( 'pictures/barren_rt.jpg');
-  let texture_lf = new THREE.TextureLoader().load( 'pictures/barren_lf.jpg');
+  let texture_ft = new THREE.TextureLoader().load( 'pictures/barren/barren_ft.jpg');
+  let texture_bk = new THREE.TextureLoader().load( 'pictures/barren/barren_bk.jpg');
+  let texture_up = new THREE.TextureLoader().load( 'pictures/barren/barren_up.jpg');
+  let texture_dn = new THREE.TextureLoader().load( 'pictures/barren/barren_dn.jpg');
+  let texture_rt = new THREE.TextureLoader().load( 'pictures/barren/barren_rt.jpg');
+  let texture_lf = new THREE.TextureLoader().load( 'pictures/barren/barren_lf.jpg');
     
   materialArray.push(new THREE.MeshBasicMaterial( { map: texture_ft }));
   materialArray.push(new THREE.MeshBasicMaterial( { map: texture_bk }));
@@ -41,3 +41,10 @@ function animate() {
   requestAnimationFrame(animate);
 }
 init();
+
+
+// Buttons function
+let button = document.querySelector("button")
+button.addEventListener("click", function(){
+  alert("veikia")
+})
