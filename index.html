@@ -7,6 +7,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        overflow: hidden
       }
     </style>
   </head>
@@ -31,12 +32,12 @@
         controls.maxDistance = 3000;
         
         let materialArray = [];
-        let texture_ft = new THREE.TextureLoader().load( 'pictures/arid2_ft.jpg');
-        let texture_bk = new THREE.TextureLoader().load( 'pictures/arid2_bk.jpg');
-        let texture_up = new THREE.TextureLoader().load( 'pictures/arid2_up.jpg');
-        let texture_dn = new THREE.TextureLoader().load( 'pictures/arid2_dn.jpg');
-        let texture_rt = new THREE.TextureLoader().load( 'pictures/arid2_rt.jpg');
-        let texture_lf = new THREE.TextureLoader().load( 'pictures/arid2_lf.jpg');
+        let texture_ft = new THREE.TextureLoader().load( 'pictures/barren_ft.jpg');
+        let texture_bk = new THREE.TextureLoader().load( 'pictures/barren_bk.jpg');
+        let texture_up = new THREE.TextureLoader().load( 'pictures/barren_up.jpg');
+        let texture_dn = new THREE.TextureLoader().load( 'pictures/barren_dn.jpg');
+        let texture_rt = new THREE.TextureLoader().load( 'pictures/barren_rt.jpg');
+        let texture_lf = new THREE.TextureLoader().load( 'pictures/barren_lf.jpg');
           
         materialArray.push(new THREE.MeshBasicMaterial( { map: texture_ft }));
         materialArray.push(new THREE.MeshBasicMaterial( { map: texture_bk }));
